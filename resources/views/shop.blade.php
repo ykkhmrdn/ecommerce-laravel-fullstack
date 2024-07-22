@@ -3,8 +3,8 @@
 @section('title', 'Shop')
 @section('content')
 
-<!-- start page content -->
-<div class="container">
+    <!-- start page content -->
+    <div class="container">
         <div class="row">
             <!-- start filter section -->
             <div class="col-md-2" style="margin-top:1em">
@@ -13,7 +13,9 @@
                 </h4>
                 <ul class="filter-ul">
                     @foreach ($categories as $category)
-                        <li><a class="text-center {{ $category->name == $categoryName ? 'active-cat' : '' }}" href="{{ route('shop.index', ['category' => $category->slug]) }}">{{ $category->name }}</a></li>
+                        <li><a class="text-center {{ $category->name == $categoryName ? 'active-cat' : '' }}"
+                                href="{{ route('shop.index', ['category' => $category->slug]) }}">{{ $category->name }}</a>
+                        </li>
                     @endforeach
                 </ul>
                 <h4 class="filter-header">
@@ -21,7 +23,8 @@
                 </h4>
                 <ul class="filter-ul">
                     @foreach ($tags as $tag)
-                        <li><a class="text-center {{ $tag->name == $tagName ? 'active-cat' : '' }}" href="{{ route('shop.index', ['tag' => $tag->slug]) }}">{{ $tag->name }}</a></li>
+                        <li><a class="text-center {{ $tag->name == $tagName ? 'active-cat' : '' }}"
+                                href="{{ route('shop.index', ['tag' => $tag->slug]) }}">{{ $tag->name }}</a></li>
                     @endforeach
                 </ul>
             </div>
@@ -36,8 +39,14 @@
                     </div>
                     <div class="col-md-6 text-right">
                         <span class='font-weight-bolder' style="font-size: 1.2em">Price: </span>
-                        <span class="align-right"><a href="{{ route('shop.index', ['category'=> request()->category, 'tag'=> request()->tag, 'sort' => 'low_high']) }}" class="text-decoration-none {{ request()->sort == 'low_high' ? 'active-sort' : '' }}">Low to High</a></span>
-                        <span class="align-right"><a href="{{ route('shop.index', ['category'=> request()->category, 'tag'=> request()->tag, 'sort' => 'high_low']) }}" class="text-decoration-none {{ request()->sort == 'high_low' ? 'active-sort' : '' }}">High to Low</a></span>
+                        <span class="align-right"><a
+                                href="{{ route('shop.index', ['category' => request()->category, 'tag' => request()->tag, 'sort' => 'low_high']) }}"
+                                class="text-decoration-none {{ request()->sort == 'low_high' ? 'active-sort' : '' }}">Low to
+                                High</a></span>
+                        <span class="align-right"><a
+                                href="{{ route('shop.index', ['category' => request()->category, 'tag' => request()->tag, 'sort' => 'high_low']) }}"
+                                class="text-decoration-none {{ request()->sort == 'high_low' ? 'active-sort' : '' }}">High
+                                to Low</a></span>
                     </div>
                 </div>
                 <!-- start products row -->
@@ -47,9 +56,11 @@
                         <div class="col-md-6 col-sm-12 col-lg-4 product">
                             <a href="{{ route('shop.show', $product->slug) }}" class="custom-card">
                                 <div class="card view overlay zoom">
-                                    <img src="{{ productImage($product->image) }}" class="card-img-top img-fluid" alt="..." height="200px" width="200px">
+                                    <img src="{{ productImage($product->image) }}" class="card-img-top img-fluid"
+                                        alt="..." height="200px" width="200px">
                                     <div class="card-body">
-                                        <h5 class="card-title">{{ $product->name }}<span class="float-right">$ {{ format($product->price) }}</span></h5>
+                                        <h5 class="card-title">{{ $product->name }}<span class="float-right">Rp.
+                                                {{ format($product->price) }}</span></h5>
                                         {{-- <div class="product-actions" style="display: flex; align-items: center; justify-content: center">
                                             <a class="cart" href="#" style="margin-right: 1em"><i style="color:blue; font-size: 1.3em" class="fas fa-cart-plus"></i></a>
                                             <a class="like" href="#" style="margin-right: 1em"><i style="color:blue; font-size: 1.3em" class="fa fa-thumbs-up"></i></a>
@@ -62,8 +73,8 @@
                         <!-- end single product -->
                     @endforeach
                 </div>
-                <div class="text-center">
-                    {{ $products->appends(request()->input())->links() }}
+                <div class="text-center" style="display: flex; justify-content:center;">
+                    {{ $products->appends(request()->input())->links('pagination::bootstrap-4') }}
                 </div>
                 <!-- end products row -->
             </div>

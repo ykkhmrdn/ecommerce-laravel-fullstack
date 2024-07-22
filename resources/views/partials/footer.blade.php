@@ -1,29 +1,28 @@
-<footer class="bg-dark">
-    <div class="container bg-dark">
+<footer class="bg-danger">
+    <div class="container bg-danger">
         <div class="footer">
             <div class="row">
                 <div class="col-md-4">
-                    <a href="#" class="footer-link">Privacy policy</a><br>
-                    <a href="#" class="footer-link">Term and conditions</a><br>
+                    <h3>
+                        Selamat Datang di Toko Soember Baru
+                    </h3>
+                    <p>Sumber terpercaya Anda untuk produk berkualitas. Nikmati pengalaman belanja terbaik bersama kami.
+                    </p>
                 </div>
                 <div class="col-md-4">
                     <h3>
-                        Welcome to the site
+                        Kontak:
                     </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, assumenda. Culpa, libero.</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>
-                        Contact:
-                    </h3>
-                    <p>Email: mohammedomer789@gmail.com</p>
-                    <p>Website: <a href="https://mhmdomer.com">Personal Website</a></p>
-                    <p>Github: <a href="https://github.com/mhmdomer">@mhmdomer</a></p>
-                    <p>Twitter: <a href="https://twitter.com/mhmdomer_">@mhmdomer_</a></p>
-                    <p>LinkedIn: <a href="https://linkedin.com/in/mohammed-omer-ali">Mohammed Omer</a></p>
+                    <p>Email: info@tokosoemberbaru.com</p>
+                    <p>Website: <a href="#">Toko Soember Baru</a></p>
+                    <p>Instagram: <a href="#">@tokosoemberbaru</a></p>
+                    <p>Facebook: <a href="#">Toko Soember Baru</a></p>
                 </div>
             </div>
         </div>
-        <p>copyright &copy; Mohammed Omer Ali - All rights reserved 2019</p>
+        <div style="text-align: center;">
+            <p>Copyright &copy; Toko Soember Baru - All rights reserved 2024</p>
+        </div>
+
     </div>
 </footer>

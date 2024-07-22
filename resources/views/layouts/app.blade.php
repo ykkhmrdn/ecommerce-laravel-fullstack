@@ -14,7 +14,10 @@
             @include('partials.errors')
             @yield('content')
         </div>
-        @include('partials.footer')
+        <div style="margin-top: 10em;">
+       @include('partials.footer')
+        </div>
+ 
     </div>
 </body>
 @yield('scripts')
